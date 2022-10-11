@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assetes/style.css" />
+    <title>stable-diffusion-animation</title>
+  </head>
+  <body>
+    <div class="container">
+    <header>
+        <p class="logo">Replicate</p>
+        <nav>
+            <ul>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Blog</a></li>
+                <button class="button_sign-in">Sign in</button>
+            </ul>
+        </nav>
+        <button class="button_run-this">Get started</button>
+    </header>
+    <section class="under-header">
+        <div class="breadcrumps">
+            <a href="#" class="origin-link">andreasjansson</a><span> &#47 </span><a href="#" class="this-page">stable-diffusion-animation</a>
+        </div >
+        <div class="settings-row">
+            <div class="column">
+                
+                <ul class="settings-bar">
+                <li><div class="accessibility">                
+                    <img src="assetes/icons/worldwide-svgrepo-com.svg" alt="worldwide-icon" width="20px">
+                    <p>Public</p> 
+                                   
+                </div></li>
+                <li class="settings-item">Animate </li>
+                <li class="settings-item">Stable </li>
+                <li class="settings-item">Diffusion by interpolating</li>
+                <li class="settings-item">between two prompts</li>
+                </ul>
+            </div>
+            <div class="useful-links column">
+                <div class="code-runs">
+                    <img src="assetes/icons/rocket.svg" alt="rocket-icon" width="20px">
+                    <p>13.9K runs</p>
+                    
+                </div>
+                <div class="gh">
+                    <img src="assetes/icons/github.svg" alt="github-icon" width="20px">
+                    <p>GitHub</p>
+                    
+                </div>
+                <div class="license">
+                    <img src="assetes/icons/libra.svg" alt="scales-icon" width="20px">
+                    <p>License</p>
+                    
+                </div>
+            </div>
+       
+       
+       </div>
+       
+
+    </section>
+
+    <nav class="overview">
+        <ul>
+            <li>Overview</li>
+            <li  class="overview_active">Examples</li>
+            <li>Versions</li>
+        </ul>
+    </nav>
+    <hr>
+    <main>
+      
+        <section>
+          <div class="column column__inputs">
+            <h2>Input</h2>
+ <!--=====================================================Video 1====================================================================-->             
+            <label>
+                <p>seed</p>
+            </label>             
+            <input name="seed" type="number" value="7825" />
+            <label>
+              <p>width</p>
+            </label>
+            <input name="width" type="number" value="512" />
+            <label>
+              <p>height</p>
+            </label>
+            <input name="hight" type="number" value="512" />
+            <label>
+              <p>prompt_end</p>
+            </label>
+            <textarea
+              name="prompt_end"
+              type="text"
+              rows="4"
+    
+            >the tall neon covered skyline of paris in 2050, science fiction, space ships, cgsociety, space art, matte painting, redshift, concept art
+            </textarea>
+            <label>
+              <p>prompt_start</p>
+            </label>
+            <textarea
+              name="prompt_start"
+              type="text"
+    
+            >the low skyline of medieval paris, cgsociety, concept art
+            </textarea>
+            <label>
+              <p>gif_ping-pong</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="gif_ping-pong" checked />
+            <label>
+              <p>output_format</p>
+            </label>
+            <input type="text" name="output_format" value="mp4" />
+            <label>
+              <p>guidance_scale</p>
+            </label>
+            <input type="number" name="guidance_scale" value="7.5" />
+            <label>
+              <p>prompt_strength</p>
+            </label>
+            <input type="number" name="prompt_strength" value="0.7" />
+            <label>
+              <p>film_interpolation</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="film_interpolation" checked />
+            <label>
+              <p>num_inference_staps</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="50" />
+            <label>
+              <p>num_animation_frames</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="20" />
+            <label>
+              <p>gif_frames_per_second</p>
+            </label>
+            <input type="number" name="gif_frames_per_second" value="20" />
+            <label>
+              <p>num_interpolation_steps</p>
+            </label>
+            <input type="number" name="num_interpolation_steps" value="5" />
+            <button class="bautton_tweak">
+              <img src="assetes/icons/tweak-icon.svg" height="12px" alt="tweak icon button">
+              Tweak It
+            </button>
+          </div>
+          <div class="column video_column">
+            <h2>Output</h2>
+            <video src="assetes/videos/output.mp4" type="video/mp4" controls autoplay loop playsinline muted>
+                Your browser does not support the video tag.
+            </video>
+            <form action="#">
+              <button type="submit" class="button_report">
+                <img src="assetes/icons/report-icon.svg" height="20px" alt="report button icon">
+                Report
+              </button>
+            </form>
+            <button class="button_sting">>_Show logs</button>
+          </div>
+        </section>
+
+        <hr />
+<!--=====================================================Video 2====================================================================-->  
+        <section>
+          <div class="column column__inputs">
+            <label>
+                <p>seed</p>
+            </label> 
+            <input name="seed" type="number" value="41784" />
+            <label>
+              <p>width</p>
+            </label>
+            <input name="width" type="number" value="512" />
+            <p>height</p>
+            <label>
+              <p>height</p>
+            </label>
+            <input name="hight" type="number" value="512" />
+            <label>
+              <p>prompt_end</p>
+            </label>
+           <textarea
+              name="prompt_end"
+              type="text"
+              rows="5"
+            
+            >a person stepping out of the painting, holding the frame, a fine art painting by Michelangelo Merisi da Caravaggio, featured on instagram, classical realism, art on instagram, academic art, art
+            </textarea>
+            <label>
+              <p>prompt_start</p>
+            </label>
+            <textarea
+              name="prompt_start"
+              type="text"
+              rows="4"
+            >a person sitting in a chair, a fine art framed painting by Michelangelo Merisi `da Caravaggio, featured on instagram, classical realism, art on instagram, academic art, art
+            </textarea>
+            <label>
+              <p>gif_ping-pong</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="gif_ping-pong" checked />
+            <label>
+              <p>output_format</p>
+            </label>
+            <input type="text" name="output_format" value="mp4" />
+            <label>
+              <p>guidance_scale</p>
+            </label>
+            <input type="number" name="guidance_scale" value="7.5" />
+            <label>
+              <p>prompt_strength</p>
+            </label>
+            <input type="number" name="prompt_strength" value="0.7" />
+            <label>
+              <p>film_interpolation</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="film_interpolation" checked />
+            <label>
+              <p>num_inference_staps</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="50" />
+            <label>
+              <p>num_animation_frames</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="20" />
+            <label>
+              <p>gif_frames_per_second</p>
+            </label>
+            <input type="number" name="gif_frames_per_second" value="20" />
+            <label>
+              <p>num_interpolation_steps</p>
+            </label>
+            <input type="number" name="num_interpolation_steps" value="5" />
+            <button class="bautton_tweak">
+              <img src="assetes/icons/tweak-icon.svg" height="12px" alt="tweak icon button">
+              Tweak It
+            </button>
+          </div>
+          <div class="column column__video">
+            <video
+              src="assetes/videos/output (1).mp4" controls autoplay loop playsinline muted
+              
+            >Your browser does not support the video tag.</video>
+            <form action="#">
+              <button type="submit" class="button_report">
+                <img src="assetes/icons/report-icon.svg" height="20px" alt="report button icon">
+                Report
+              </button>
+            </form>
+            <button class="button_sting">>_Show logs</button>
+          </div>
+        </section>
+
+        <hr>
+<!--=====================================================Video 3====================================================================--> 
+        <section>
+          <div class="column column__inputs">
+            
+            <label>
+              <p>width</p>
+            </label>
+            <input name="width" type="number" value="512" />
+            <p>height</p>
+            <label>
+              <p>height</p>
+            </label>
+            <input name="hight" type="number" value="512" />
+            <label>
+              <p>prompt_end</p>
+            </label>
+           <textarea
+              name="prompt_end"
+              type="text"
+              rows="2"
+            
+            >travel into another dimension, geometric, sparkling, flashing, astral
+            </textarea>
+            <label>
+              <p>prompt_start</p>
+            </label>
+            <textarea
+              name="prompt_start"
+              type="text"
+              rows="1"
+            >kaleidoscopic hyperspace vortex
+            </textarea>
+            <label>
+              <p>gif_ping-pong</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="gif_ping-pong" checked />
+            <label>
+              <p>output_format</p>
+            </label>
+            <input type="text" name="output_format" value="mp4" />
+            <label>
+              <p>guidance_scale</p>
+            </label>
+            <input type="number" name="guidance_scale" value="7.5" />
+            <label>
+              <p>prompt_strength</p>
+            </label>
+            <input type="number" name="prompt_strength" value="0.9" />
+            <label>
+              <p>film_interpolation</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="film_interpolation" checked />
+            <label>
+              <p>num_inference_staps</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="50" />
+            <label>
+              <p>num_animation_frames</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="20" />
+            <label>
+              <p>gif_frames_per_second</p>
+            </label>
+            <input type="number" name="gif_frames_per_second" value="20" />
+            <label>
+              <p>num_interpolation_steps</p>
+            </label>
+            <input type="number" name="num_interpolation_steps" value="3" />
+            <button class="bautton_tweak">
+              <img src="assetes/icons/tweak-icon.svg" height="12px" alt="tweak icon button">
+              Tweak It
+            </button>
+          </div>
+          <div class="column column__video">
+            <video
+              src="assetes/videos/output (2).mp4" controls autoplay loop playsinline muted
+              
+            >Your browser does not support the video tag.</video>
+            <form action="#">
+              <button type="submit" class="button_report">
+                <img src="assetes/icons/report-icon.svg" height="20px" alt="report button icon">
+                Report
+              </button>
+            </form>
+            <button class="button_sting">>_Show logs</button>
+          </div>
+        </section>
+
+        <hr>
+
+<!--=====================================================Video 4====================================================================--> 
+        <section>
+          <div class="column column__inputs">
+            
+            <label>
+              <p>width</p>
+            </label>
+            <input name="width" type="number" value="512" />
+            <p>height</p>
+            <label>
+              <p>height</p>
+            </label>
+            <input name="hight" type="number" value="512" />
+            <label>
+              <p>prompt_end</p>
+            </label>
+           <textarea
+              name="prompt_end"
+              type="text"
+              rows="6"
+            
+            >tall rectangular black monolith, a white room in the future with a bed, victorian details and a tall black monolith, a detailed matte painting by Wes Anderson, behance, light and space, reimagined by industrial light and magic, matte painting, criterion collection
+            </textarea>
+            <label>
+              <p>prompt_start</p>
+            </label>
+            <textarea
+              name="prompt_start"
+              type="text"
+              rows="6"
+            >tall rectangular black monolith, monkeys in the desert looking at a large tall monolith, a detailed matte painting by Wes Anderson, behance, light and space, reimagined by industrial light and magic, matte painting, criterion collection
+            </textarea>
+            <label>
+              <p>gif_ping-pong</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="gif_ping-pong" checked />
+            <label>
+              <p>output_format</p>
+            </label>
+            <input type="text" name="output_format" value="mp4" />
+            <label>
+              <p>guidance_scale</p>
+            </label>
+            <input type="number" name="guidance_scale" value="7.5" />
+            <label>
+              <p>prompt_strength</p>
+            </label>
+            <input type="number" name="prompt_strength" value="0.9" />
+            <label>
+              <p>film_interpolation</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="film_interpolation" checked />
+            <label>
+              <p>num_inference_staps</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="50" />
+            <label>
+              <p>num_animation_frames</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="25" />
+            <label>
+              <p>gif_frames_per_second</p>
+            </label>
+            <input type="number" name="gif_frames_per_second" value="20" />
+            <label>
+              <p>num_interpolation_steps</p>
+            </label>
+            <input type="number" name="num_interpolation_steps" value="5" />
+            <button class="bautton_tweak">
+              <img src="assetes/icons/tweak-icon.svg" height="12px" alt="tweak icon button">
+              Tweak It
+            </button>
+          </div>
+          <div class="column column__video">
+            <video
+              src="assetes/videos/output 9.mp4" controls autoplay loop playsinline muted
+              
+            >Your browser does not support the video tag.</video>
+            <form action="#">
+              <button type="submit" class="button_report">
+                <img src="assetes/icons/report-icon.svg" height="20px" alt="report button icon">
+                Report
+              </button>
+            </form>
+            <button class="button_sting">>_Show logs</button>
+          </div>
+        </section>
+
+        <hr>
+
+<!--=====================================================Video 5====================================================================--> 
+        <section>
+          <div class="column column__inputs">
+            
+            <label>
+              <p>width</p>
+            </label>
+            <input name="width" type="number" value="1024" />
+            <p>height</p>
+            <label>
+              <p>height</p>
+            </label>
+            <input name="hight" type="number" value="512" />
+            <label>
+              <p>prompt_end</p>
+            </label>
+           <textarea
+              name="prompt_end"
+              type="text"
+              rows="4"
+            
+            >the tall neon covered skyline of london in 2050, science fiction, space ships, cgsociety, space ships, space art, matte painting, redshift, concept art
+
+            </textarea>
+            <label>
+              <p>prompt_start</p>
+            </label>
+            <textarea
+              name="prompt_start"
+              type="text"
+              rows="2"
+            >the low skyline of medieval london, cgsociety, concept art
+            </textarea>
+            <label>
+              <p>gif_ping-pong</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="gif_ping-pong" checked />
+            <label>
+              <p>output_format</p>
+            </label>
+            <input type="text" name="output_format" value="mp4" />
+            <label>
+              <p>guidance_scale</p>
+            </label>
+            <input type="number" name="guidance_scale" value="7.5" />
+            <label>
+              <p>prompt_strength</p>
+            </label>
+            <input type="number" name="prompt_strength" value="0.7" />
+            <label>
+              <p>film_interpolation</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="film_interpolation" checked />
+            <label>
+              <p>num_inference_staps</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="50" />
+            <label>
+              <p>num_animation_frames</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="40" />
+            <label>
+              <p>gif_frames_per_second</p>
+            </label>
+            <input type="number" name="gif_frames_per_second" value="20" />
+            <label>
+              <p>num_interpolation_steps</p>
+            </label>
+            <input type="number" name="num_interpolation_steps" value="5" />
+            <button class="bautton_tweak">
+              <img src="assetes/icons/tweak-icon.svg" height="12px" alt="tweak icon button">
+              Tweak It
+            </button>
+          </div>
+          <div class="column column__video">
+            <video
+              src="assetes/videos/output (4).mp4" controls autoplay loop playsinline muted
+              
+            >Your browser does not support the video tag.</video>
+            <form action="#">
+              <button type="submit" class="button_report">
+                <img src="assetes/icons/report-icon.svg" height="20px" alt="report button icon">
+                Report
+              </button>
+            </form>
+            <button class="button_sting">>_Show logs</button>
+          </div>
+        </section>
+
+        <hr>
+
+<!--=====================================================Video 6====================================================================--> 
+        <section>
+          <div class="column column__inputs">
+            
+            <label>
+              <p>width</p>
+            </label>
+            <input name="width" type="number" value="512" />
+            <p>height</p>
+            <label>
+              <p>height</p>
+            </label>
+            <input name="hight" type="number" value="512" />
+            <label>
+              <p>prompt_end</p>
+            </label>
+           <textarea
+              name="prompt_end"
+              type="text"
+              rows="2"
+            
+            >the face of tom cruise smiling a happy smile, headshot
+
+            </textarea>
+            <label>
+              <p>prompt_start</p>
+            </label>
+            <textarea
+              name="prompt_start"
+              type="text"
+              rows="1"
+            >the face of tom cruise very angry, headshot
+            </textarea>
+            <label>
+              <p>gif_ping-pong</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="gif_ping-pong" checked />
+            <label>
+              <p>output_format</p>
+            </label>
+            <input type="text" name="output_format" value="mp4" />
+            <label>
+              <p>guidance_scale</p>
+            </label>
+            <input type="number" name="guidance_scale" value="7.5" />
+            <label>
+              <p>prompt_strength</p>
+            </label>
+            <input type="number" name="prompt_strength" value="0.75" />
+            <label>
+              <p>film_interpolation</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="film_interpolation" checked />
+            <label>
+              <p>num_inference_staps</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="50" />
+            <label>
+              <p>num_animation_frames</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="10" />
+            <label>
+              <p>gif_frames_per_second</p>
+            </label>
+            <input type="number" name="gif_frames_per_second" value="20" />
+            <label>
+              <p>num_interpolation_steps</p>
+            </label>
+            <input type="number" name="num_interpolation_steps" value="5" />
+            <button class="bautton_tweak">
+              <img src="assetes/icons/tweak-icon.svg" height="12px" alt="tweak icon button">
+              Tweak It
+            </button>
+          </div>
+          <div class="column column__video">
+            <video
+              src="assetes/videos/output (5).mp4" controls autoplay loop playsinline muted
+              
+            >Your browser does not support the video tag.</video>
+            <input type="range" name="video-range" step="1" min="1" max="11" value="11">
+            <form action="#">
+              <button type="submit" class="button_report">
+                <img src="assetes/icons/report-icon.svg" height="20px" alt="report button icon">
+                Report
+              </button>
+            </form>
+            <button class="button_sting">>_Show logs</button>
+          </div>
+        </section>
+
+        <hr>
+ 
+<!--=====================================================Video 7====================================================================--> 
+        <section>
+          <div class="column column__inputs">
+            
+            <label>
+              <p>width</p>
+            </label>
+            <input name="width" type="number" value="512" />
+            <p>height</p>
+            <label>
+              <p>height</p>
+            </label>
+            <input name="hight" type="number" value="512" />
+            <label>
+              <p>prompt_end</p>
+            </label>
+           <textarea
+              name="prompt_end"
+              type="text"
+              rows="2"
+            
+            >an alien spaceship shaped like a butterfly with wings in space, cgsociety
+
+            </textarea>
+            <label>
+              <p>prompt_start</p>
+            </label>
+            <textarea
+              name="prompt_start"
+              type="text"
+              rows="1"
+            >a butterfly in space, cgsociety
+            </textarea>
+            <label>
+              <p>gif_ping-pong</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="gif_ping-pong" checked />
+            <label>
+              <p>output_format</p>
+            </label>
+            <input type="text" name="output_format" value="mp4" />
+            <label>
+              <p>guidance_scale</p>
+            </label>
+            <input type="number" name="guidance_scale" value="7.5" />
+            <label>
+              <p>prompt_strength</p>
+            </label>
+            <input type="number" name="prompt_strength" value="0.9" />
+            <label>
+              <p>film_interpolation</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="film_interpolation" checked />
+            <label>
+              <p>num_inference_staps</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="50" />
+            <label>
+              <p>num_animation_frames</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="10" />
+            <label>
+              <p>gif_frames_per_second</p>
+            </label>
+            <input type="number" name="gif_frames_per_second" value="20" />
+            <label>
+              <p>num_interpolation_steps</p>
+            </label>
+            <input type="number" name="num_interpolation_steps" value="5" />
+            <button class="bautton_tweak">
+              <img src="assetes/icons/tweak-icon.svg" height="12px" alt="tweak icon button">
+              Tweak It
+            </button>
+          </div>
+          <div class="column column__video">
+            <video
+              src="assetes/videos/output (6).mp4" controls autoplay loop playsinline muted
+              
+            >Your browser does not support the video tag.</video>
+            <input type="range" name="video-range" step="1" min="1" max="11" value="11">
+            <form action="#">
+              <button type="submit" class="button_report">
+                <img src="assetes/icons/report-icon.svg" height="20px" alt="report button icon">
+                Report
+              </button>
+            </form>
+            <button class="button_sting">>_Show logs</button>
+          </div>
+        </section>
+
+        <hr>
+
+<!--=====================================================Video 8====================================================================--> 
+        <section>
+          <div class="column column__inputs">
+            <label>
+                <p>
+                    seed
+                </p>
+            </label>
+            <input type="number" value="30329">
+            <label>
+              <p>width</p>
+            </label>
+            <input name="width" type="number" value="512" />
+            <p>height</p>
+            <label>
+              <p>height</p>
+            </label>
+            <input name="hight" type="number" value="512" />
+            <label>
+              <p>prompt_end</p>
+            </label>
+           <textarea
+              name="prompt_end"
+              type="text"
+              rows="3"
+            
+            >an alien spaceship shaped like a butterfly with wings in space, high detail, hi tech, sci fi, cgsociety
+
+            </textarea>
+            <label>
+              <p>prompt_start</p>
+            </label>
+            <textarea
+              name="prompt_start"
+              type="text"
+              rows="1"
+            >a butterfly in space, cgsociety
+            </textarea>
+            <label>
+              <p>gif_ping-pong</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="gif_ping-pong" checked />
+            <label>
+              <p>output_format</p>
+            </label>
+            <input type="text" name="output_format" value="mp4" />
+            <label>
+              <p>guidance_scale</p>
+            </label>
+            <input type="number" name="guidance_scale" value="7.5" />
+            <label>
+              <p>prompt_strength</p>
+            </label>
+            <input type="number" name="prompt_strength" value="0.6" />
+            <label>
+              <p>film_interpolation</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="film_interpolation" checked />
+            <label>
+              <p>num_inference_staps</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="50" />
+            <label>
+              <p>num_animation_frames</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="20" />
+            <label>
+              <p>gif_frames_per_second</p>
+            </label>
+            <input type="number" name="gif_frames_per_second" value="20" />
+            <label>
+              <p>num_interpolation_steps</p>
+            </label>
+            <input type="number" name="num_interpolation_steps" value="3" />
+            <button class="bautton_tweak">
+              <img src="assetes/icons/tweak-icon.svg" height="12px" alt="tweak icon button">
+              Tweak It
+            </button>
+          </div>
+          <div class="column column__video">
+            <video
+              src="assetes/videos/output (7).mp4" controls autoplay loop playsinline muted
+              
+            >Your browser does not support the video tag.</video>
+            <input type="range" name="video-range" step="1" min="1" max="11" value="11">
+            <form action="#">
+              <button type="submit" class="button_report">
+                <img src="assetes/icons/report-icon.svg" height="20px" alt="report button icon">
+                Report
+              </button>
+            </form>
+            <button class="button_sting">>_Show logs</button>
+          </div>
+        </section>
+
+        <hr>
+
+<!--=====================================================Video 9====================================================================--> 
+        <section>
+          <div class="column column__inputs">
+            
+            <label>
+              <p>width</p>
+            </label>
+            <input name="width" type="number" value="512" />
+            <p>height</p>
+            <label>
+              <p>height</p>
+            </label>
+            <input name="hight" type="number" value="512" />
+            <label>
+              <p>prompt_end</p>
+            </label>
+           <textarea
+              name="prompt_end"
+              type="text"
+              rows="3"
+            
+            >symmetrical oak tree in a field, full of green leaves, lush, summer, sunny
+
+            </textarea>
+            <label>
+              <p>prompt_start</p>
+            </label>
+            <textarea
+              name="prompt_start"
+              type="text"
+              rows="1"
+            >symmetrical oak tree in a field, without leaves, bare, winter, dark
+            </textarea>
+            <label>
+              <p>gif_ping-pong</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="gif_ping-pong" checked />
+            <label>
+              <p>output_format</p>
+            </label>
+            <input type="text" name="output_format" value="mp4" />
+            <label>
+              <p>guidance_scale</p>
+            </label>
+            <input type="number" name="guidance_scale" value="7.5" />
+            <label>
+              <p>prompt_strength</p>
+            </label>
+            <input type="number" name="prompt_strength" value="0.9" />
+            <label>
+              <p>film_interpolation</p>
+            </label>
+            <input class="checkbox" type="checkbox" name="film_interpolation" checked />
+            <label>
+              <p>num_inference_staps</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="50" />
+            <label>
+              <p>num_animation_frames</p>
+            </label>
+            <input type="number" name="num_animation_frames" value="25" />
+            <label>
+              <p>gif_frames_per_second</p>
+            </label>
+            <input type="number" name="gif_frames_per_second" value="20" />
+            <label>
+              <p>num_interpolation_steps</p>
+            </label>
+            <input type="number" name="num_interpolation_steps" value="5" />
+            <p>This example was created by @bfirsh</p>
+            <button class="bautton_tweak">
+              <img src="assetes/icons/tweak-icon.svg" height="12px" alt="tweak icon button">
+              Tweak It
+            </button>
+          </div>
+          <div class="column column__video">
+            <video
+              src="assetes/videos/output (8).mp4" controls autoplay loop playsinline muted
+              
+            >Your browser does not support the video tag.</video>
+            <form action="#">
+              <button type="submit" class="button_report">
+                <img src="assetes/icons/report-icon.svg" height="20px" alt="report button icon">
+                Report
+              </button>
+            </form>
+            <button class="button_sting">>_Show logs</button>
+          </div>
+        </section>
+
+        <hr>
+        
+        <section class="question">
+            <p class="">Want to make some of these yourself?</p>
+            <button class="button_run-this">Run this model</button>
+        </section>
+        <hr>
+        <footer>
+            <p>Replicate</p>
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Email</a></li>
+                </ul>
+            </nav>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
