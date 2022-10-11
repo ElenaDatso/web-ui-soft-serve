@@ -170,6 +170,7 @@ footer {
     height: 200px;
     align-items: center;
     align-items: flex-start;
+    margin-top: 60px;
 }
 
 ul {
@@ -277,7 +278,7 @@ a {
 }
 .useful-links p{
     padding-left: 5px;
-    
+
 }
 
 .useful-links div:first-of-type {
