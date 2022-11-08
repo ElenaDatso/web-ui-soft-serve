@@ -35,7 +35,7 @@ numbers.forEach(function (i) {
   i.addEventListener('click', function () {
 
 	if (i.innerHTML === '.' && input.innerHTML.includes('.')) return;
-
+	if (input.innerHTML === '0') input.innerHTML = '';
     if (currentOperator && currentOperator !== '=') {
       chosenNum += i.innerHTML;
       input.innerHTML += i.innerHTML;
