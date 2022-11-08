@@ -102,10 +102,12 @@ const ifSide = () => {
 }
 
 const coopeNumber = () => {
-  return number <= 36 ? Math.ceil(number/4) : Math.abs((number - 36)-10);
+  return number <= 36 ? Math.ceil(number/4) : Math.abs(Math.ceil((number - 36)/2)-10);
 }
 
 console.log('Your place is:');
 console.log('bottom:', ifBottomShelf());
 console.log('side:', ifSide());
 console.log('coupe N:', coopeNumber());
+
+//------------------------------------ Tic-Tac-Toe Checker ---------------------------------//
