@@ -91,23 +91,76 @@ clear.addEventListener('click', ()=>{
 
 // ------------------------------------ ВАГОН-----------------------------------------//
 
-const number = prompt('Enter your place number');
+// const number = prompt('Enter your place number');
 
-const ifBottomShelf = () => {
-	return number%2 !== 0;
-}
+// const ifBottomShelf = () => {
+// 	return number%2 !== 0;
+// }
 
-const ifSide = () => {
-	return number > 36;
-}
+// const ifSide = () => {
+// 	return number > 36;
+// }
 
-const coopeNumber = () => {
-  return number <= 36 ? Math.ceil(number/4) : Math.abs(Math.ceil((number - 36)/2)-10);
-}
+// const coopeNumber = () => {
+//   return number <= 36 ? Math.ceil(number/4) : Math.abs(Math.ceil((number - 36)/2)-10);
+// }
 
-console.log('Your place is:');
-console.log('bottom:', ifBottomShelf());
-console.log('side:', ifSide());
-console.log('coupe N:', coopeNumber());
+// console.log('Your place is:');
+// console.log('bottom:', ifBottomShelf());
+// console.log('side:', ifSide());
+// console.log('coupe N:', coopeNumber());
 
 //------------------------------------ Tic-Tac-Toe Checker ---------------------------------//
+
+const situation = 	[[0, 1, 2],
+					 [1, 2, 1],
+					 [2, 2, 2]];
+
+function ifWon (array) {
+	for (let i = 0; i < 3; i++){
+		for (let j = 1; j <=1; j++){
+			if (array[i][j] &&
+				array[i][j] === array[i][j - 1]	&& 
+				array[i][j] === array[i][j + 1]){
+					console.log(array[i][j], 'WON');
+					return;
+				} 
+		}	
+	}
+		for (let i = 0; i <= 2; i++){
+			const ar = [];
+			for (let j = 0; j <=2; j++){
+				ar.push(array[j][i]);
+				if (ar[1] &&ar[0] === ar [1] && ar[1] === ar[2]){
+					console.log(ar[1], 'WON!')
+					return
+				}
+			}
+		}	
+
+		for (let i = 0; i <= 2; i++) {
+      		const ar = [];
+      		for (let j = 0; j <= 2; j++) {
+        		ar.push(array[j][i++]);
+        		if (ar[1] && ar[0] === ar[1] && ar[1] === ar[2]) {
+              console.log(ar[1], 'WON!');
+              return;
+            }
+      		}
+    	}	
+
+		for (let i = 2; i >= 0; i--) {
+      		const ar = [];
+      	for (let j = 2; j >= 0; j--) {
+        	ar.push(array[j][i--]);
+        	if (ar[1] && ar[0] === ar[1] && ar[1] === ar[2]) {
+          	console.log(ar[1], 'WON!');
+			return
+        }
+      }
+    }	
+	
+	
+}
+
+ifWon(situation);
