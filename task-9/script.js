@@ -88,3 +88,24 @@ clear.addEventListener('click', ()=>{
 	currentOperator = 0;
 	input.innerHTML = '0';
 })
+
+// ------------------------------------ ВАГОН-----------------------------------------//
+
+const number = prompt('Enter your place number');
+
+const ifBottomShelf = () => {
+	return number%2 !== 0;
+}
+
+const ifSide = () => {
+	return number > 36;
+}
+
+const coopeNumber = () => {
+  return number <= 36 ? Math.ceil(number/4) : Math.abs((number - 36)-10);
+}
+
+console.log('Your place is:');
+console.log('bottom:', ifBottomShelf());
+console.log('side:', ifSide());
+console.log('coupe N:', coopeNumber());
