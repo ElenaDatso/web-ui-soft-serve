@@ -1,0 +1,41 @@
+.calc {
+	max-width: 200px;
+	margin: auto;
+	margin-top: 30px;
+}
+.calc__numbers-row {
+	display: flex;
+	height: 40px;
+}
+.calc__number,
+.calc__clear,
+.calc__result,
+.calc__math {
+	flex-basis: 40px;
+	text-align: center;
+	align-items:center;
+	margin: auto;
+	cursor: pointer;
+}
+.calc__clear,
+.calc__result,
+.calc__math  {
+	background-color: rgb(168, 210, 196);
+	border-radius: 5px;
+}
+.calc__number:hover,
+.calc__clear:hover,
+.calc__result:hover,
+.calc__math:hover {
+	background-color: rgb(206, 206, 206);
+	border-radius: 5px;
+	transition: background-color 0.2s ease;
+}
+.calc__input {
+	max-width: 100%;
+	text-align: center;
+	margin: auto;
+	font-size: 50px;
+	border: none;
+}
+
