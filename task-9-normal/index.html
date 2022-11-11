@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//Щасливий квиток: Напишіть веб-додаток для розрахунку щасливого квитка. Користувач вводить шестизначний номер квитка (трамвай/тролейбус). Визначте, чи дорівнює сума перших трьох цифр сумі останніх трьох цифр. Виведіть повідомлення про "щасливість" квитка користувачеві.
+	
+		const num = prompt('Enter 6-digit number');
+		const ifLucky = (num) => {
+			const leftSide = num.slice(0, 3).split('').reduce((prev, cur) => +prev + +cur);
+			const rightSide = num.slice(3).split('').reduce((prev, cur) => +prev + +cur)
+			return leftSide === rightSide? 'is LUCKY :D' : 'nope NOT lucky :(';
+		}
+		console.log(ifLucky(num));
+	// //Найкоротше слово Напишіть програму, що отримує у користувача рядок слів та повертає довжину найкоротшого
+
+		const theString = prompt('Enter words');
+		const theShortestWord = (str) => {
+			return str.split(' ').sort((a,b) => a.length - b.length)[0].length;
+		}
+		console.log(theShortestWord(theString));
+
+	//ДНК Дезоксирибонуклеїнова кислота (ДНК) — це хімічна речовина, що міститься в ядрі клітин і несе «інструкції» для розвитку та функціонування живих організмів.
+
+		const dna = prompt('enter DNA');
+
+		const pairs = {
+			A : 'T',
+			T: 'A',
+			C: 'G',
+			G: 'C',
+		}
+
+		const complementDna = (dna) => {
+			return dna.split('').map(el => el = pairs[el]).join('')
+		}
+
+		console.log(`${dna} ===>`, complementDna(dna))
+	</script>
+</body>
+</html>
